@@ -1,9 +1,9 @@
-// Define Cuisine Discriminated Union
+
 type Cuisine =
     | Korean
     | Turkish
 
-// Define MovieType Discriminated Union
+
 type MovieType =
     | Regular
     | IMAX
@@ -12,7 +12,6 @@ type MovieType =
     | IMAXWithSnacks
     | DBOXWithSnacks
 
-// Define Activity Discriminated Union
 type Activity =
     | BoardGame
     | Chill
@@ -20,7 +19,7 @@ type Activity =
     | Restaurant of Cuisine
     | LongDrive of int * float // (kilometres, fuel charges per kilometre)
 
-// Function to calculate budget based on activity
+
 let calculateBudget (activity: Activity) : float =
     match activity with
     | BoardGame | Chill -> 0.0
@@ -38,7 +37,7 @@ let calculateBudget (activity: Activity) : float =
         | Turkish -> 65.0
     | LongDrive (km, chargePerKm) -> float km * chargePerKm
 
-// Example usage and printing the budget
+
 let valentinesDayPlan = [
     Movie RegularWithSnacks
     Restaurant Korean
