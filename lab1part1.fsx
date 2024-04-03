@@ -17,7 +17,7 @@ type Activity =
     | Chill
     | Movie of MovieType
     | Restaurant of Cuisine
-    | LongDrive of int * float // (kilometres, fuel charges per kilometre)
+    | LongDrive of int * float 
 
 
 let calculateBudget (activity: Activity) : float =
